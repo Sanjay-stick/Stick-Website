@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>STICK_OFFICIAL.com</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/headers/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        #Background{
+          background-color: white;
+        }
+        #logo{
+          width: 50px;
+          height: 50px;
+        }
+        #logoname{
+          font-size: 10px;
+          color: blue;
+        }
+        #space{
+          visibility: hidden;
+        }
+        #Navbar{
+          background: rgb(250,250,250);
+background: linear-gradient(90deg, rgba(250,250,250,1) 26%, rgba(73,110,252,1) 60%, rgba(0,4,96,1) 100%);
+        }
+        #Navbar1{
+          background: rgb(250,250,250);
+background: linear-gradient(90deg, rgba(250,250,250,1) 26%, rgba(73,110,252,1) 60%, rgba(0,4,96,1) 100%);
+        }
+        #Links{
+          color: white;
+        }
+        #Slides{
+          height: 500px;
+        }
+        * {
+  box-sizing: border-box;
+}
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+
+      }
+
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        .mySlides {display:none;}
+
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+
+        .active {
+          background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="headers.css" rel="stylesheet">
+  </head>
+  <body id="Background">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="bootstrap" viewBox="0 0 118 94">
+    <title>Bootstrap</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+  </symbol>
+  <symbol id="home" viewBox="0 0 16 16">
+    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+  </symbol>
+  <symbol id="speedometer2" viewBox="0 0 16 16">
+    <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+    <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+  </symbol>
+  <symbol id="table" viewBox="0 0 16 16">
+    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+  </symbol>
+  <symbol id="people-circle" viewBox="0 0 16 16">
+    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+  </symbol>
+  <symbol id="grid" viewBox="0 0 16 16">
+    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+  </symbol>
+</svg>
+
+<main>
+  <h1 class="visually-hidden">Headers examples</h1>
+
+
+<div id="Navbar" style="height:90px;">
+
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center ">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <img src="D:\New folder (3)\Desktop\Desktop\STICK\Website\004.png" alt="Logo" id="logo" style="height: 85px; width: 70px;">
+        <p id="space">Sp</p>
+        <span class="fs-4" style="color: black; font-size: 80px;"><b>STICK</b></span>
+        <ul class="nav nav-pills" style="padding-top: 25px;">
+          <li class="nav-item"><a href="D:\New folder (3)\Desktop\Desktop\STICK\Website\bootstrap-5.0.1-examples\headers\Signin.html" class="nav-link" id="Links"><b>Sign In</b></a></li>
+          <li class="nav-item"><a href="D:\New folder (3)\Desktop\Desktop\STICK\Website\bootstrap-5.0.1-examples\headers\index.html" class="nav-link active" aria-current="page" id="Links"><b>Home</b></a></li>
+          <li class="nav-item"><a href="D:\New folder (3)\Desktop\Desktop\STICK\Website\bootstrap-5.0.1-examples\headers\Aboutus.html" class="nav-link" id="Links"><b>About us</b></a></li>
+          <li class="nav-item"><a href="D:\New folder (3)\Desktop\Desktop\STICK\Website\bootstrap-5.0.1-examples\headers\Event.html" class="nav-link" id="Links"><b>Events</b></a></li>
+          <li class="nav-item"><a href="D:\New folder (3)\Desktop\Desktop\STICK\Website\bootstrap-5.0.1-examples\headers\Acheivements.html" class="nav-link" id="Links"><B>Acheivements</B></a></li>
+        </ul>
+      </a>
+
+
+    </header>
+  </div>
+ 
+<center>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style=" height: 700px;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-color: white;">
+        <img src="D:\New folder (3)\Desktop\Desktop\STICK\Website\hardware PNG.png" style="height: 700px; width: 1550px;" alt="" >
+    
+      </div>
+      <div class="carousel-item"  style="background-color: white;">
+        <img src="D:\New folder (3)\Desktop\Desktop\STICK\Website\stick tech post.png" style="height: 700px; width: 1550px;" alt="" >
+    
+      
+      </div>
+      <div class="carousel-item"  style="background-color: white;">
+        <img src="D:\New folder (3)\Desktop\Desktop\STICK\Website\DESIGNING .png" style="height: 700px; width: 1550px;" alt="" >
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+  <div style="height:10px;">
+
+  </div>
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row" style="background: rgb(38,38,38);
+      background: linear-gradient(90deg, rgba(38,38,38,1) 26%, rgba(50,72,157,1) 60%, rgba(0,13,149,1) 100%); width: 100%; height: 500px;">
+        <div >
+
+        </div>
+        <div class="col-lg-4" >
+          <img src="https://qph.fs.quoracdn.net/main-qimg-011de5342604fe4790a86357beec5ee5.webp" alt="" style="height: 200px;">
+  
+          <h2 style="color: white;">Techies</h2>
+          <p style="color: white;">One of the best reasons to study programming is because it is a creative and enjoyable problem solving activity. You'll learn how to develop well-designed solutions to a range of interesting problems. You will be able to see and experience your solutions as running programs.</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="https://www.freepnglogos.com/uploads/photoshop-png-logo/download-photoshop-logo-png-picture-png-image-pngimg-14.png" alt="" style="height: 200px;">
+          <h2 style="color: white;">Designing</h2>
+          <p style="color: white;">Choosing design as a subject can teach you very valuable skills that will prepare you for the world and a wide variety of careers in the future. In other words, design can help to develop skills that can help you to navigate a very complex world.</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://brandslogos.com/wp-content/uploads/images/large/arduino-logo-1.png" alt="" style="height: 200px;">
+  
+          <h2 style="color: white;">Hardware</h2>
+          <p style="color: white;">It is easy to explore the new technology and applications. It's better decision making solution and communication made creators more confident to represent themselves. IoT is best opportunity for career oriented creators as they can learn, build and understand system on its own.</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      
+  
+  
+
+
+    <!-- /END THE FEATURETTES -->
+    <div style="height: 150px;">
+
+    </div>
+
+
+
+      <!-- START THE FEATURETTES -->
+
+  
+      <div class="row featurette" >
+        <div class="col-md-7" style="padding-top: 100px; ">
+          <h2 class="featurette-heading">Tech Omada:</h2>
+          <p   class="lead">What is that which couldn’t be achieved by a stalwart in programming. And that it doesn’t take all you think that it would take to code unless you take a small step towards starting to learn. The only language that is going to dominate would be the computer language. Make sure you have a hold on !! so that you aren’t outdated!</p>
+        </div>
+        <div class="col-md-5">
+          
+          <img src="D:\New folder (3)\Desktop\Desktop\STICK\Website\Tech.JPEG" style="height: 500px; width: 500px;" alt="">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider" >
+  
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2" style="padding-top: 100px;  ">
+          <h2 class="featurette-heading"   >Design Omada:</h2>
+          <p class="lead"  >Nothing is complete without some garnishing be it be mouth watering food or life saving apps. Converting a functional material into to desirable one is the job that is most challenging for all. It’s the place where  creative mind meets a psychological one where in people need to be creative one side while on the other focus on the people’s psychology so that it is irresistible! 
+            </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="D:\New folder (3)\Desktop\Desktop\STICK\Website\Designing.JPEG" style="height: 500px; width: 500px;" alt="">
+  
+        </div>
+      </div>
+  
+      <hr class="featurette-divider" >
+  
+      <div class="row featurette" >
+        <div class="col-md-7" style="padding-top: 100px;  ">
+          <h2 class="featurette-heading"  >Hardware Osamakanada:</h2>
+          <p class="lead">Learning hardware isn’t hard as you guess that to be but definitely heard while you need a sound team to put in any projects into swing. Circuits ranging from dainty  to mighty . Nothing stops your progress with a well planned pcb and learning that is the key for any product. It is the hybrid of both tech and design brains! Isn’t that alluring?.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="D:\New folder (3)\Desktop\Desktop\STICK\Website\100x100hardware1.PNG" style="height: 500px; width: 500px;" alt="">
+  
+        </div>
+        
+      </div>
+
+      <div style="height: 50px;">
+
+      </div>
+
+      <section class="regular slider">
+        <div class="col-lg-4" style="border-radius: 25px; ">
+          <img src="https://qph.fs.quoracdn.net/main-qimg-011de5342604fe4790a86357beec5ee5.webp" alt="" style="height: 200px;">
+  
+          <h2 style="color: black; ">Sanjay.K</h2>
+          <p style="color: black;">Management Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://brandslogos.com/wp-content/uploads/images/large/arduino-logo-1.png" alt="" style="height: 200px;">
+  
+          <h2 style="color: black;">Manickavasagam.C</h2>
+          <p style="color: black;">Hardware Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://www.freepnglogos.com/uploads/photoshop-png-logo/download-photoshop-logo-png-picture-png-image-pngimg-14.png" alt="" style="height: 200px;">
+  
+          <h2 style="color: black;">Chandra kumar</h2>
+          <p style="color: black;">Design Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://qph.fs.quoracdn.net/main-qimg-011de5342604fe4790a86357beec5ee5.webp" alt="" style="height: 200px;">
+  
+          <h2 style="color: black;">Abishek.A.S</h2>
+          <p style="color: black;">Tech Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://www.freepnglogos.com/uploads/photoshop-png-logo/download-photoshop-logo-png-picture-png-image-pngimg-14.png" alt="" style="height: 200px;">
+  
+          <h2 style="color: black;">Venudharshan.B</h2>
+          <p style="color: black;">Design Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://www.freepnglogos.com/uploads/photoshop-png-logo/download-photoshop-logo-png-picture-png-image-pngimg-14.png" alt="" style="height: 200px;">
+  
+          <h2 style="color: black;">Kalaiarasan.M</h2>
+          <p style="color: black;">Design & Management Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://www.freepnglogos.com/uploads/photoshop-png-logo/download-photoshop-logo-png-picture-png-image-pngimg-14.png" alt="" style="height: 200px;">
+  
+          <h2 style="color: black;">Dinesh kumar.K</h2>
+          <p style="color: black;">Design & Tech Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://www.freepnglogos.com/uploads/photoshop-png-logo/download-photoshop-logo-png-picture-png-image-pngimg-14.png" alt="" style="height: 200px;">
+  
+          <h2 style="color: black;">Sivasanjay.S</h2>
+          <p style="color: black;">Design Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://qph.fs.quoracdn.net/main-qimg-011de5342604fe4790a86357beec5ee5.webp" alt="" style="height: 200px;">
+  
+          <h2 style="color: black;">Suwasthika shri.</h2>
+          <p style="color: black;">Tech Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://qph.fs.quoracdn.net/main-qimg-011de5342604fe4790a86357beec5ee5.webp" alt="" style="height: 200px;">
+  
+          <h2 style="color: black;">Jagedeeshwaran.K</h2>
+          <p style="color: black;">Tech Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" >
+          <img src="https://www.freepnglogos.com/uploads/photoshop-png-logo/download-photoshop-logo-png-picture-png-image-pngimg-14.png" alt="" style="height: 200px;">
+  
+          <h2 style="color: black;">Kabil dharshan</h2>
+          <p style="color: black;">Design Team</p>
+          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </section>
+  <div style="height: 100px;">
+
+  </div>
+  <div style="background-color: black;">
+          <footer class="pt-4 my-md-5 pt-md-5">
+            <div class="row">
+              <div class="col-6 col-md">
+                <h5 style="color: white;">Contact Us</h5>
+                <ul class="list-unstyled text-small">
+                  <li class="mb-1"><a class="link-light text-decoration-none" href="#">Contact Number</a></li>
+                  <li class="mb-1"><a class="link-light text-decoration-none" href="#">Gmail.com</a></li>
+                  <li class="mb-1"><a class="link-light text-decoration-none" href="#">Instagram.com</a></li>
+                  <li class="mb-1"><a class="link-light text-decoration-none" href="#">Facebook.com</a></li>
+                  <li class="mb-1"><a class="link-light text-decoration-none" href="#">LinkedIn.com</a></li>
+                  
+                </ul>
+              </div>
+          </footer>   
+    <!-- FOOTER -->
+        <footer class="container">
+          <p class="float-end"><a href="#">Back to top</a></p>
+          <p style="color: white;">&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+  </div>      
+  </main>
+  
+
+</center>
+      
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript">
+      $(".regular").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+
+      });
+  </script>
+      
+  </body>
+</html>
